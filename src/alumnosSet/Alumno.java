@@ -1,5 +1,7 @@
 package alumnosSet;
 
+import java.util.Arrays;
+
 public class Alumno {
 	private String nombre;
 	private String apellidos;
@@ -84,6 +86,16 @@ public class Alumno {
 			System.out.println("Es un genio");
 		}
 	}
-	
-	
+
+	@Override
+	public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("\n\tnombre: ").append(nombre);
+        sb.append("\n\tapellido: ").append(apellidos);
+        sb.append("\n\tedad: ").append(edad);
+        sb.append("\n\tNotaMedia: ").append(notaMedia);
+        sb.append("\n\temail: ").append(email);
+        return sb.toString();
+    }
+
 }
