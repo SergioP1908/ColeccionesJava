@@ -32,8 +32,14 @@ import alumnosSet.Alumno;
 
 public class listaAlumnos {
 
+    public listaAlumnos(){
+
+    }
+
 
     public static void main(String[] args) {
+
+        listaAlumnos newAlumnos = new listaAlumnos();
 
         ArrayList <Alumno> alumnos = new ArrayList<>();
 
@@ -49,17 +55,17 @@ public class listaAlumnos {
 
         alumnos.add(new Alumno("N6", "A6", 17, 5, "shdhyuswdeb@qwqw"));
         
-        mostrarAlumnos(alumnos);
+        newAlumnos.mostrarAlumnos(alumnos);
 
         
-        //buscarAlumno(alumnos);
+        //newAlumnos.buscarAlumno(alumnos);
 
-        aulasAlumno(alumnos);
+        newAlumnos.aulasAlumno(alumnos);
 
         
     }
 
-    private static void  mostrarAlumnos(List <Alumno> alumnos){
+    private  void  mostrarAlumnos(List <Alumno> alumnos){
         
         
 
@@ -71,7 +77,7 @@ public class listaAlumnos {
         
     }
 
-    private static String buscarAlumno(List<Alumno>alumnos){
+    private  String buscarAlumno(List<Alumno>alumnos){
         
 		Scanner scan = new Scanner(System.in);
         System.out.println("\nIngrese el nombre del alumno que desea buscar: ");
@@ -99,7 +105,7 @@ public class listaAlumnos {
         return buscAlumno;
     }
 
-    private static Map <String, List<Alumno>> aulasAlumno(List<Alumno>alumnos){
+    private Map <String, List<Alumno>> aulasAlumno(List<Alumno>alumnos){
 
         Map <String, List<Alumno>> aulas = new LinkedHashMap<>();
 
@@ -118,5 +124,12 @@ public class listaAlumnos {
         }
 
         return aulas;
+    }
+
+    private double notaPromedio (Map <String, List<Alumno>> alumnos){
+
+
+        double notMedia=0;
+        return notMedia;
     }
 }
