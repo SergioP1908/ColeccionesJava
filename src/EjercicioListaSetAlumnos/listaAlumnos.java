@@ -53,12 +53,31 @@ public class listaAlumnos {
 
         alumnos.add(new Alumno("N5", "A5", 17, 4, "shdhyuswdeb@qwqw"));
 
-        alumnos.add(new Alumno("N6", "A6", 17, 5, "shdhyuswdeb@qwqw"));
+        alumnos.add(new Alumno("N6", "A6", 17, 0, "shdhyuswdeb@qwqw"));
+
+        /*Otra manera de crear la lista
+         * Alumno alumno = new Alumno("N1", "A1", 17, 9, "shdhyuswdeb@qwqw");
+         * Alumno alumno1 = new Alumno("N1", "A1", 17, 9, "shdhyuswdeb@qwqw");
+         * Alumno alumno2= new Alumno("N1", "A1", 17, 9, "shdhyuswdeb@qwqw");
+         * Alumno alumno3 = new Alumno("N1", "A1", 17, 9, "shdhyuswdeb@qwqw");
+         * Alumno alumno4 = new Alumno("N1", "A1", 17, 9, "shdhyuswdeb@qwqw");
+         * Alumno alumno5 = new Alumno("N1", "A1", 17, 9, "shdhyuswdeb@qwqw");
+         * 
+         * alumnos.add(alumno);
+         * alumnos.add(alumno1);
+         * alumnos.add(alumno2);
+         * alumnos.add(alumno3);
+         * alumnos.add(alumno4);
+         * alumnos.add(alumno5);
+         * 
+         * Ejercicio14Parte1 e14p1 = new Ejercicio14Parte1();
+         * e14p1.mostrarAlumnos = (alumnos) nos permite aladir un metodo private a un metodo pubic static
+         */
         
         newAlumnos.mostrarAlumnos(alumnos);
 
         
-        //newAlumnos.buscarAlumno(alumnos);
+        newAlumnos.buscarAlumno(alumnos);
 
         newAlumnos.aulasAlumno(alumnos);
 
@@ -129,7 +148,23 @@ public class listaAlumnos {
     private double notaPromedio (Map <String, List<Alumno>> alumnos){
 
 
+        
+
+
         double notMedia=0;
         return notMedia;
     }
+
+
+    private  void  eliminarAlumnos(List <Alumno> alumnos){
+
+        for (Alumno alumno : alumnos) {
+            if(alumno.getNotaMedia()<5){
+                alumnos.remove(alumno);
+
+                
+            }
+        }
+    }
+
 }
