@@ -1,6 +1,7 @@
 package EjercicioListaSetAlumnos;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -74,15 +75,18 @@ public class listaAlumnos {
          * e14p1.mostrarAlumnos = (alumnos) nos permite aladir un metodo private a un metodo pubic static
          */
         
+        
+
+        
+        //newAlumnos.buscarAlumno(alumnos);
+
+       // newAlumnos.aulasAlumno(alumnos);
+
+        newAlumnos.eliminarAlumnos(alumnos);
         newAlumnos.mostrarAlumnos(alumnos);
-
-        
-        newAlumnos.buscarAlumno(alumnos);
-
-        newAlumnos.aulasAlumno(alumnos);
-
-        
     }
+
+    
 
     private  void  mostrarAlumnos(List <Alumno> alumnos){
         
@@ -145,6 +149,8 @@ public class listaAlumnos {
         return aulas;
     }
 
+    
+
     private double notaPromedio (Map <String, List<Alumno>> alumnos){
 
 
@@ -158,13 +164,24 @@ public class listaAlumnos {
 
     private  void  eliminarAlumnos(List <Alumno> alumnos){
 
-        for (Alumno alumno : alumnos) {
+/*         for (Alumno alumno : alumnos) {
             if(alumno.getNotaMedia()<5){
                 alumnos.remove(alumno);
 
                 
             }
+        } */
+
+        for (int i = 0; i < alumnos.size(); i++) {
+            Alumno alumno = alumnos.get(i); // recorre la lista de alumnos
+
+            if(alumno.getNotaMedia()<5){
+                alumnos.remove(i--);
+            }
+
+            
         }
+        
     }
 
 }
